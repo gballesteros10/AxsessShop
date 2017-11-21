@@ -20,9 +20,7 @@ import { UserSignupComponent } from './users/user-signup/user-signup.component';
     FormsModule,
     RouterModule.forRoot([
       { path: 'login', component: UserLoginComponent },
-      { path: 'signup', component: UserSignupComponent },
-      { path: '', component: AppComponent },
-      { path: '**', redirectTo: '', pathMatch: 'full' }
+      { path: 'signup', component: UserSignupComponent }
     ], { useHash: true })
   ],
   providers: [],

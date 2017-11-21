@@ -11,16 +11,19 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Axsess Shop';
 
-  constructor(private _router: Router) {
-  }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
-    // this.checkIfLoggedIn();
+    this.checkIfLoggedIn();
+  }
+
+  shouldDisplayNav(): boolean {
+    return this._router.url != '/login' && this._router.url != '/signup';
   }
 
   checkIfLoggedIn() {
     if (isNullOrUndefined(localStorage.getItem("user"))) {
-      // alert('Will redirect to login...');
+      alert('Will redirect to login...');
       this._router.navigate(['/login']);
     }
   }

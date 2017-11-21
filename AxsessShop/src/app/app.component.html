@@ -1,2 +1,18 @@
-<!--Replace this with proper content. Login page is only here because of routing issue.-->
-<as-user-login></as-user-login>
+<div>
+  <nav class="navbar navbar-default" *ngIf="this.shouldDisplayNav()">
+    <div class="container-fluid">
+      <a class="navbar-brand">Axsess Shop</a>
+      <ul class="nav navbar-nav">
+        <li>
+          <a [routerLink]="['/products']">Products</a>
+        </li>
+        <li>
+          <a [routerLink]="['/categories']">Categories</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
