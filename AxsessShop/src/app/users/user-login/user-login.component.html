@@ -5,18 +5,34 @@
                 Login
             </div>
             <div class='panel-body'>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input [(ngModel)]="user.email" name="email"
-                            type="email" class="form-control" placeholder="Enter email">
+                <form (ngSubmit)="login(this.user)" #loginForm="ngForm">
+                    <div [hidden]="!error"
+                        class="alert alert-danger">
+                        {{error}}
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input [(ngModel)]="user.password" name="password"
-                            type="password" class="form-control" placeholder="Enter password">
+                        <label for="email">Email address</label>
+                        <input [(ngModel)]="user.email" name="email" (change)="this.error=''"
+                            type="email" class="form-control" placeholder="Enter email" #email="ngModel" required>
+                        <div [hidden]="email.valid || email.pristine"
+                            class="alert alert-danger">
+                            Email is required
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" (click)="login(this.user)">Submit</button>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input [(ngModel)]="user.password" name="password" (change)="this.error=''"
+                            type="password" class="form-control" placeholder="Enter password" #password="ngModel" required>
+                            <div [hidden]="password.valid || password.pristine"
+                                class="alert alert-danger">
+                                Password is required
+                            </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                        (click)="login(this.user)"
+                        [disabled]="!loginForm.form.valid">
+                        Submit
+                    </button>
                 </form>
             </div>
             <div class='panel-footer clearfix'>

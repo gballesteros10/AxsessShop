@@ -6,7 +6,7 @@ export class UserSignupService {
 
   constructor() { }
 
-  signup(user): boolean {
+  signup(user) {
     const usersListJson = localStorage.getItem("usersList");
     let usersList = usersListJson? JSON.parse(usersListJson) : [];
 
@@ -14,11 +14,10 @@ export class UserSignupService {
       usersList = [...usersList, Object.assign({}, user)];
       localStorage.setItem("usersList", JSON.stringify(usersList));
       localStorage.setItem("user", JSON.stringify(user));
-      return true;
+      return {successful: true, error: undefined};
     }
     else {
-      alert("Email is in-use.");
-      return false;
+      return {successful: false, error: "Email is in-use."};
     }
   }
 

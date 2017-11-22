@@ -14,6 +14,8 @@ export class UserLoginComponent implements OnInit {
     password: ''
   };
 
+  error = '';
+
   constructor(private _userLoginService: UserLoginService, private _router: Router) { }
 
   ngOnInit() {
@@ -24,7 +26,7 @@ export class UserLoginComponent implements OnInit {
     if(this._userLoginService.login(this.user))
       this._router.navigate(['dashboard']);
     else
-      alert("Invalid email and/or password.");
+      this.error = "Invalid email and/or password.";
   }
 
 }

@@ -13,7 +13,8 @@ export class UserSignupComponent implements OnInit {
     email: '',
     password: ''
   };
-  confirmPassword: ''
+  confirmPassword: '';
+  error = '';
 
   constructor(private _userSignupService: UserSignupService, private _router: Router) { }
 
@@ -22,8 +23,11 @@ export class UserSignupComponent implements OnInit {
   }
 
   signup() {
-    if (this._userSignupService.signup(this.user))
+    const signUpResult = this._userSignupService.signup(this.user);
+    if (signUpResult.successful)
       this._router.navigate(['dashboard']);
+    else
+      this.error = signUpResult.error;
   }
 
 }
