@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserLoginService } from '../user-login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'as-user-login',
@@ -7,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginComponent implements OnInit {
 
-  constructor() { }
+  user = {
+    email: '',
+    password: ''
+  };
+
+  constructor(private _userLoginService: UserLoginService, private _router: Router) { }
 
   ngOnInit() {
     console.log("Login onInit");
+  }
+
+  login() {
+    if(this._userLoginService.login(this.user))
+      this._router.navigate(['/']);
+    else
+      alert("Invalid email and/or password.");
   }
 
 }

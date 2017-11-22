@@ -8,14 +8,22 @@
                 <form>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input [(ngModel)]="user.email" name="email"
+                            type="email" class="form-control" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input [(ngModel)]="user.password" name="password"
+                            type="password" class="form-control" placeholder="Enter password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" (click)="login(this.user)">Submit</button>
                 </form>
+            </div>
+            <div class='panel-footer clearfix'>
+                <a [routerLink]="['/signup']"
+                    class='pull-right' style='display:inline'>
+                    Don't have an account yet?
+                </a>
             </div>
         </div>
     </div>
