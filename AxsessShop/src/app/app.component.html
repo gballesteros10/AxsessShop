@@ -1,18 +1,14 @@
-<div>
-  <nav class="navbar navbar-default" *ngIf="this.shouldDisplayNav()">
-    <div class="container-fluid">
-      <a class="navbar-brand">Axsess Shop</a>
-      <ul class="nav navbar-nav">
-        <li>
-          <a [routerLink]="['/products']">Products</a>
-        </li>
-        <li>
-          <a [routerLink]="['/categories']">Categories</a>
-        </li>
-      </ul>
+
+<div class="container as-header">
+    <div class="col">
+      <p>Axsess Shop</p>
     </div>
-  </nav>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</div>
+    <div class="col">
+        <p>Cart ({{ (_data.cart | async).length }})</p>
+      </div>
+    
+    
+    </div>
+    <div style="border: 1px solid black">
+        <router-outlet></router-outlet>
+      </div>

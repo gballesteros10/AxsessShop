@@ -24,7 +24,7 @@ export class UserLoginComponent implements OnInit {
 
   login() {
     if(this._userLoginService.login(this.user))
-      this._router.navigate(['/']);
+      this._router.navigate(['dashboard']);
     else
       this.error = "Invalid email and/or password.";
   }

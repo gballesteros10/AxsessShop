@@ -25,7 +25,7 @@ export class UserSignupComponent implements OnInit {
   signup() {
     const signUpResult = this._userSignupService.signup(this.user);
     if (signUpResult.successful)
-      this._router.navigate(['/']);
+      this._router.navigate(['dashboard']);
     else
       this.error = signUpResult.error;
   }

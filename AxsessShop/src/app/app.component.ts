@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './core/data.service';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { isNullOrUndefined } from 'util';
 import { Router } from '@angular/router';
@@ -8,10 +9,11 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+    
 export class AppComponent implements OnInit {
   title = 'Axsess Shop';
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router,public _data:DataService) { }
 
   ngOnInit(): void {
     this.checkIfLoggedIn();
@@ -27,4 +29,5 @@ export class AppComponent implements OnInit {
       this._router.navigate(['/login']);
     }
   }
+
 }

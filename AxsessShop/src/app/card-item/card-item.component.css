@@ -1,0 +1,22 @@
+mat-card {
+	display:inline-block;
+    margin: 20px;
+}
+
+mat-card-content p {
+	font-size:14px;
+}
+
+.example-card {
+  width: 300px;
+}
+
+.mat-dialog-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.mat-dialog-content{
+    text-align: center;
+}
