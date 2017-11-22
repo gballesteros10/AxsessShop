@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Axsess Shop';
 
-  constructor(private _router: Router,public _data:DataService) { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
     this.checkIfLoggedIn();

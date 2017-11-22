@@ -12,6 +12,7 @@ import { UserLoginComponent } from './users/user-login/user-login.component';
 import { UserSignupComponent } from './users/user-signup/user-signup.component';
 import { UserLoginService } from './users/user-login.service';
 import { UserSignupService } from './users/user-signup.service';
+import { HeaderComponent } from './shared/header/header.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UserSignupService } from './users/user-signup.service';
     AppComponent,
     DashboardComponent,
     UserLoginComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    HeaderComponent
   ],
   imports: [
     CoreModule,

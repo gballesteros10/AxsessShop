@@ -1,0 +1,18 @@
+
+.as-header {
+	background: #54548c;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-family: monospace;
+}
+.container {
+	display: flex;
+	grid-template-columns: 50% auto;
+}
+
+.col{
+	padding: .4em 1.3em;
+	font-size: 18px;
+	font-family: 'Arial';
+}
