@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { DataService } from './data.service';
 import { DialogService } from './dialog.service';
-import { MatDialogModule, MatCardModule, MatButtonModule, MatButtonToggleModule } from '@angular/material';
+
 import { CardItemComponent } from '../card-item/card-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -14,24 +15,17 @@ import { CardItemComponent } from '../card-item/card-item.component';
     CardItemComponent
   ],
   imports: [   
-    MatCardModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    FormsModule,
-    CommonModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
+
   ],
-  exports: [   
-    FormsModule,
-    CommonModule,
+  exports: [ 
+
     BrowserModule,
     BrowserAnimationsModule ,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatDialogModule,
-    MatCardModule
+    SharedModule
+
   ],
   entryComponents:[CardItemComponent],
   providers: [DataService, DialogService],

@@ -14,7 +14,7 @@ export class CategoriesComponent implements OnInit {
   public param: string;
   public items: CartItem[];
   public categoryName: string = 'tablets';
-  public popupResponse:any;
+  public popupResponse: any;
   settings = {
     columns: {
       id: {
@@ -30,35 +30,34 @@ export class CategoriesComponent implements OnInit {
   };
 
   constructor(private route: ActivatedRoute,
-    private router: Router, 
+    private router: Router,
     public _data: DataService,
     public _dialog: DialogService) {
-      this.route.params.subscribe(res => console.log('id: ',res.id));
-    
-   }
+    this.route.params.subscribe(res => console.log('id: ', res.id));
+
+  }
 
   ngOnInit() {
 
     this.route.params.subscribe(res => {
-    this.param = res.id;
-    this._data.callCategory(this.param).subscribe(res => this.items = res);
-        
-    });  
-    
+      this.param = res.id;
+      this._data.callCategory(this.param).subscribe(res => this.items = res);
+
+    });
+
   }
 
-  public openDialog(item)
-  {
-     this._dialog.openDialogService(item).subscribe(res => {
-       if(res){
-          console.log("I returned here");
-          this._data.addToCart(res);
-       }
-     });
-  } 
+  public openDialog(item) {
+    this._dialog.openDialogService(item).subscribe(res => {
+      if (res) {
+        console.log("I returned here");
+        this._data.addToCart(res);
+      }
+    });
+  }
 
 
 
 
- 
+
 }
