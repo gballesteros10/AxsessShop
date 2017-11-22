@@ -16,7 +16,7 @@ export class DataService {
     callCategory(param): Observable<CartItem[]>{
       switch(param){
         case 'computers': return this.getComputers();
-        case 'tablets': return this.getComputers();   
+        case 'tablets': return this.getTablets();   
       }
     }
  

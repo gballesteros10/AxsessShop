@@ -5,7 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { CategoriesRoutingModule } from './categories-routing.module';
 
 import {
-    MatTableModule, MatGridListModule,MatCardModule,MatDialogModule,  MatButtonModule,
+    MatTableModule, 
+    MatGridListModule,
+    MatCardModule,
+    MatDialogModule,  
+    MatButtonModule,
     MatButtonToggleModule
   } from '@angular/material';
 import { CategoriesComponent } from './categories.component';
