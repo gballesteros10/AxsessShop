@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { UserLoginComponent } from './users/user-login/user-login.component';
 import { UserSignupComponent } from './users/user-signup/user-signup.component';
 import { UserLoginService } from './users/user-login.service';
+import { UserSignupService } from './users/user-signup.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { UserLoginService } from './users/user-login.service';
       { path: 'signup', component: UserSignupComponent }
     ], { useHash: true })
   ],
-  providers: [UserLoginService],
+  providers: [UserLoginService, UserSignupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserSignupService } from '../user-signup.service';
 
 @Component({
   selector: 'as-user-signup',
@@ -7,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSignupComponent implements OnInit {
 
-  constructor() { }
+  user = {
+    email: '',
+    password: ''
+  };
+  confirmPassword: ''
+
+  constructor(private _userSignupService: UserSignupService, private _router: Router) { }
 
   ngOnInit() {
     console.log("Sign-up onInit");
+  }
+
+  signup() {
+    if (this._userSignupService.signup(this.user))
+      this._router.navigate(['/']);
   }
 
 }

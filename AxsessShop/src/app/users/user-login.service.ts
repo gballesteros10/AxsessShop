@@ -19,9 +19,7 @@ export class UserLoginService {
 
     if (!isNullOrUndefined(usersListJson)){
       const usersList = JSON.parse(usersListJson);
-
-      if(usersList.indexOf(user) > -1)
-        return true;
+      return !isNullOrUndefined(usersList.find(u => u.email == user.email && u.password == user.password));
     }
 
     return false;
