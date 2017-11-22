@@ -1,0 +1,9 @@
+
+<div class="row">
+  <div class="col-sm-4" *ngFor="let cat of categories">
+      <a (click)="goTo(cat.Name)" class="tile" [ngClass]="cat.Class">
+        <h3 class="title">{{cat.Name}}</h3>
+        <!-- <p>Short, sweet data point goes here.</p> -->
+      </a>
+  </div>
+</div>

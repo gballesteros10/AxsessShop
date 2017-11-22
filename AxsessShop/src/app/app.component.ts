@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './core/data.service';
 
 @Component({
   selector: 'as-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'as';
+
+  constructor(public _data:DataService){
+    
+  }
 }
