@@ -24,7 +24,8 @@ export class AppComponent implements OnInit {
   }
 
   checkIfLoggedIn() {
-    if (isNullOrUndefined(localStorage.getItem("user"))) {
+    const userJson = localStorage.getItem("user");
+    if (userJson == null || userJson == undefined) {
       console.log('Will redirect to login...');
       this._router.navigate(['/login']);
     }

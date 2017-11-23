@@ -3,5 +3,6 @@ export class CartItem {
     name: string;
     image?: string;
     details?: string;
+    price: number
   }
   

@@ -3,6 +3,6 @@
     <p>Axsess Shop</p>
   </div>
   <div class="col">
-    <p>Cart ({{ (_data.cart | async).length }})</p>
+    <a [routerLink]="['/cart']">Cart ({{ (_data.cart | async).length }})</a>
   </div>
 </div>

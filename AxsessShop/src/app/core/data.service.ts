@@ -28,11 +28,15 @@ export class DataService {
     }
  
     getComputers(): Observable<CartItem[]> {
-      return this._http.get('../../assets/data/','computers.json');  
+      return this._http.get('../../assets/data/','computers.json');
     }
 
     getTablets(): Observable<CartItem[]> {
       return Observable.of(TABLETS);
+    }
+    
+    getCartItems(): Observable<CartItem[]> {
+      return Observable.of(this.cart.getValue());
     }
 
     getMice(): Observable<CartItem[]> {

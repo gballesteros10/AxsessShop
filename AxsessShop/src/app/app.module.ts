@@ -13,6 +13,7 @@ import { UserSignupComponent } from './users/user-signup/user-signup.component';
 import { UserLoginService } from './users/user-login.service';
 import { UserSignupService } from './users/user-signup.service';
 import { HeaderComponent } from './shared/header/header.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HeaderComponent } from './shared/header/header.component';
     DashboardComponent,
     UserLoginComponent,
     UserSignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    CartComponent
   ],
   imports: [
     CoreModule,

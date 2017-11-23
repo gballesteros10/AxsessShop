@@ -29,15 +29,19 @@
                             </div>
                     </div>
 
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="confirmPassword">Password</label>
                         <input [(ngModel)]="confirmPassword" name="confirmPassword" (change)="this.error=''"
-                            type="password" class="form-control" placeholder="Confirm password" #confirmPassword="ngModel" required>
-                            <div [hidden]="confirmPassword.valid || confirmPassword.pristine"
+                            type="password" class="form-control" placeholder="Confirm password" #confirmPasswordNode="ngModel" required>
+                            <div [hidden]="confirmPasswordNode.valid || confirmPasswordNode.pristine"
                                 class="alert alert-danger">
                                 Password is required
                             </div>
-                    </div> -->
+                            <div [hidden]="!confirmPassword || confirmPassword && confirmPassword == user.password"
+                                class="alert alert-danger">
+                                Passwords don't match
+                            </div>
+                    </div>
 
                     <button type="submit" class="btn btn-primary" (click)="signup(this.user)">Submit</button>
                 </form>
