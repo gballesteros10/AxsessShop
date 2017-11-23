@@ -8,6 +8,8 @@ import { DialogService } from './dialog.service';
 
 import { CardItemComponent } from '../card-item/card-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { HttpService } from './http.service';
+
 
 
 @NgModule({
@@ -17,18 +19,16 @@ import { SharedModule } from '../shared/shared.module';
   imports: [   
     BrowserModule,
     BrowserAnimationsModule,
-    SharedModule
-
+    SharedModule,
   ],
   exports: [ 
 
     BrowserModule,
     BrowserAnimationsModule ,
-    SharedModule
-
+    SharedModule,
   ],
   entryComponents:[CardItemComponent],
-  providers: [DataService, DialogService],
+  providers: [DataService, DialogService,HttpService],
   bootstrap: []
 })
 export class CoreModule { }
