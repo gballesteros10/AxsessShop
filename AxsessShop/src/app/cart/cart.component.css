@@ -1,0 +1,26 @@
+mat-card {
+	display:inline-block;
+    margin: 20px;
+}
+
+mat-card-content p {
+	font-size:14px;
+}
+
+.example-card {
+  width: 275px;
+}
+
+.cart-summary-card {
+  width: 100%;
+}
+
+.mat-dialog-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.mat-dialog-content{
+    text-align: center;
+}

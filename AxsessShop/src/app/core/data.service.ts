@@ -27,6 +27,10 @@ export class DataService {
     getTablets(): Observable<CartItem[]> {
       return Observable.of(TABLETS);
     }
+    
+    getCartItems(): Observable<CartItem[]> {
+      return Observable.of(this.cart.getValue());
+    }
 
     addToCart(item): Array<CartItem> {
       this.cart.getValue().push(item);
