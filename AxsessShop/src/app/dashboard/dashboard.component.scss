@@ -7,16 +7,8 @@ $color_blue: #2672EC;
 
 $base_font_size: 14px;
 $base_line_height: 1.5em;
-$text_font_family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-$display_font_family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 
-body {
-	font-family: $text_font_family;
-	font-size: $base_font_size;
-	line-height: $base_line_height;
-	font-weight: 400;
-	padding: 20px 20px;
-}
+
 .div-content {
 	max-width: 1024px;
 	margin: 0 auto;
@@ -36,7 +28,6 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $display_font_family;
 	line-height: $base_line_height;
 	font-weight: 300;	
 	text-align: center;
@@ -53,6 +44,7 @@ strong {
 	background: #fff;		
 	padding: 20px;
 	margin-bottom: 10px;
+	text-decoration: none;
   
   
   &.purple, &.blue, &.red, &.orange, &.green {
@@ -98,4 +90,10 @@ strong {
 			background: darken($color_orange, 10%);
 		}	
   }
+}
+
+.db-background{
+	background: url(https://in-que.com/wp-content/uploads/2016/01/App-Directory-Wallpaper-2560x1440-710x300-crop.jpg) no-repeat center;
+	background-size: cover;
+	height: 300px;
 }

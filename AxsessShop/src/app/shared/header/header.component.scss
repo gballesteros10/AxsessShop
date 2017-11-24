@@ -1,0 +1,44 @@
+.as-header {
+	background: rgba(0,0,0,.03);
+	color: #666;
+	text-align: center;
+}
+
+.as-header a {
+	text-decoration: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+.cart-header-tab {
+	background: #8e8e8e;
+	color: #fff;
+}
+.as-header-tab{
+	padding: 20px;
+	height: 60px;
+}
+.as-header-title {
+	text-align: left;
+	font-weight: bold;
+	line-height: 0.5;
+    font-size: xx-large;
+}
+
+.cat-btn-back a {
+	line-height: 3em;
+	font-weight: bold;
+	color:#fff;
+	margin-top: 10px;
+	text-decoration:none;
+}
+.row:not(:first-child) {
+	background: #4e4d4d;	
+
+}
+div.cat-btn-back{	
+	text-align:center; 
+	border-right:2px solid #fff;
+}
+
+

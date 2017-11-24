@@ -1,7 +1,8 @@
-<div style="border: 1px solid black" class="container">
+<div class="container db-background"></div>
+<div style="border: 1px solid black;  border-top: none;" class="container">
   <div class="row" style="margin: 15px 10px 10px 10px;">
     <div class="col-sm-4" *ngFor="let cat of categories">
-      <a (click)="goTo(cat.Name)" class="tile" [ngClass]="cat.Class">
+      <a (click)="goTo(cat.Name)" class="tile"  mat-raised-button [ngClass]="cat.Class">
         <h3 class="title">{{cat.Name}}</h3>
       </a>
     </div>

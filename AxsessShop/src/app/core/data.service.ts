@@ -1,13 +1,9 @@
 import { Injectable } from '@angular/core'; 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/fromPromise';
 
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { CartItem } from '../mock-data/cart-item';
-import { COMPUTERS,MOUSE,TABLETS } from '../mock-data/mock-items';
 import { HttpService } from './http.service';
  
 @Injectable()

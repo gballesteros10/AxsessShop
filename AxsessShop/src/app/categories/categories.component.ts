@@ -1,9 +1,11 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../core/data.service';
 import { CartItem } from '../mock-data/cart-item';
 import { DialogService } from '../core/dialog.service';
+import { Subscription } from 'rxjs/Subscription';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'as-categories',
@@ -11,44 +13,33 @@ import { DialogService } from '../core/dialog.service';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-  public param: string;
   public items: CartItem[];
-  public categoryName: string = 'tablets';
-  public popupResponse: any;
-  settings = {
-    columns: {
-      id: {
-        title: 'ID'
-      },
-      name: {
-        title: 'Name'
-      },
-      username: {
-        title: 'Image'
-      }
-    }
-  };
+  
+  private categoriesSubscription:Subscription;
+  private dialogSubscription:Subscription;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    public _data: DataService,
-    public _dialog: DialogService) {
-    this.route.params.subscribe(res => console.log('id: ', res.id));
-
+    private _data: DataService,
+    private _dialog: DialogService) {
   }
 
   ngOnInit() {
+     this.categoriesSubscription = this.route.params.flatMap(res => {
+      return this._data.callCategory(res.id)}).subscribe(res => this.items = res);
+  }
 
-    this.route.params.subscribe(res => {
-      this.param = res.id;
-      this._data.callCategory(this.param).subscribe(res => this.items = res);
-
-    });
-
+  ngOnDestroy() {
+    if(this.categoriesSubscription){
+      this.categoriesSubscription.unsubscribe();
+    }
+    if(this.dialogSubscription){
+      this.dialogSubscription.unsubscribe();
+    }
   }
 
   public openDialog(item) {
-    this._dialog.openDialogService(item).subscribe(res => {
+    this.dialogSubscription = this._dialog.openDialogService(item).subscribe(res => {
       if (res) {
         console.log("I returned here");
         this._data.addToCart(res);

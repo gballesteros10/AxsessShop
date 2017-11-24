@@ -1,8 +1,24 @@
 <div class="container as-header">
-  <div class="col">
-    <p>Axsess Shop</p>
+  <div class="row">
+    <div class="col-md-4 as-header-tab as-header-title ">AxsessShop</div>
+    <div class="col-md-2 as-header-tab">
+      <a [routerLink]="['/dashboard']">Home</a>
+    </div>
+    <div class="col-md-2 as-header-tab">
+      <s>About</s>
+    </div>
+    <div class="col-md-2 as-header-tab">
+        <s>Logout</s>
+    </div>
+    <div class="col-md-2 cart-header-tab as-header-tab">
+      <a [routerLink]="['/cart']">Cart ({{ (_data.cart | async).length }})</a>
+    </div>
   </div>
-  <div class="col">
-    <a [routerLink]="['/cart']">Cart ({{ (_data.cart | async).length }})</a>
+  <div class="row" *ngIf="shouldDisplayBackBtn()">
+    <div class="col-md-2 col-xs-12 cat-btn-back">
+      <a class="cat-btn-back" [routerLink]="['/dashboard']">
+        GO BACK
+      </a>
+    </div>
   </div>
 </div>

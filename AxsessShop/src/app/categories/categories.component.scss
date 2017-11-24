@@ -119,11 +119,18 @@ mat-card-content p {
   width: 300px;
 }
 
-.cat-btn-back p {
-	background: #9898cc;
-	line-height: 4em;
+div.cat-btn-back {
+	text-align:center; 
+	border-right:2px solid #fff;
+}
+.cat-btn-back a {
+	line-height: 3em;
 	font-weight: bold;
-	width: 15%;
 	color:#fff;
+	margin-top: 10px;
+	text-decoration:none;
 }
 
+.cat-btn-details{
+	padding: 10px;
+}

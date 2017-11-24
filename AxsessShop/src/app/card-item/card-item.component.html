@@ -1,17 +1,17 @@
-<h1 mat-dialog-title>{{data.name}}</h1>
-<div mat-dialog-content>
+<div class="cart-dialog-container">
+  <h1 mat-dialog-title>{{data.name}} ({{data.price | currency}})</h1>
+  <div mat-dialog-content>
     <mat-card class="example-card">
-        <img mat-card-image [src]="data.image" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-           {{data.details}}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    
-    
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="addItemToCart(data)" tabindex="2">Add to Cart</button>
-  <button mat-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
+      <img mat-card-image [src]="data.image" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{data.details}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div mat-dialog-actions class="col-xs-12 col-xs-offset-3">
+    <button mat-button mat-raised-button (click)="addItemToCart(data)" tabindex="2">Add to Cart</button>
+    <button mat-button mat-raised-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
+  </div>
 </div>
