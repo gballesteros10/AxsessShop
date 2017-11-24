@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-
+    CardItemComponent
   ],
   imports: [   
     BrowserModule,

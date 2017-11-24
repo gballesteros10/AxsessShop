@@ -1,0 +1,38 @@
+[
+    { "id": 1, 
+      "name": "Evoluent VerticalMouse C Right Wired", 
+      "image": "https://assets.pcmag.com/media/images/514610-evoluent-verticalmouse-c-right-wired.jpg?thumb=y", 
+      "details": "The Evoluent VerticalMouse C Right Wired is a stylish update to a comfortable and highly customizable ergonomic mouse. It might even make you a vertical mouse convert.",
+      "price": 35000
+    },
+    { "id": 2, 
+      "name": "Logitech MX Master 2S", 
+      "image": "https://assets.pcmag.com/media/images/543257-logitech-mx-master-2s.jpg?thumb=y", 
+      "details": "The Logitech MX Master 2S is the ultimate wireless multitasking mouse, especially if you have a Mac and a Windows PC on the same desk." ,
+      "price": 35000
+    },
+    { "id": 3, 
+      "name": "Razer Mamba", 
+      "image": "https://assets.pcmag.com/media/images/488165-razer-mamba-2015.jpg?thumb=y", 
+      "details": "The versatile Razer Mamba gaming mouse offers unparalleled features and customization options, including adjustable click feedback, 16.8 million lighting colors, 10 programmable buttons, and..." ,
+      "price": 35000
+    },
+    { "id": 4, 
+      "name": "Corsair M65 RGB Laser Gaming Mouse",
+      "image": "https://assets.pcmag.com/media/images/458433-corsair-m65-rgb-laser-gaming-mouse.jpg?thumb=y", 
+      "details": "The Corsair M65 RGB Laser Gaming Mouse offers a killer design and lethal accuracy, and it comes in a rainbow of customizable colors." ,
+      "price": 35000
+    },
+    { "id": 5, 
+      "name": "Logitech G Pro Gaming Mouse", 
+      "image": "https://assets.pcmag.com/media/images/515728-logitech-g-pro-gaming-mouse.jpg?thumb=y", 
+      "details": "Simple, comfortable, and practical, the Logitech G Pro Gaming Mouse is ideal for the professional gamer and anyone who wants to be one someday." ,
+      "price": 35000
+    },
+    { "id": 6, 
+      "name": "Logitech MX Anywhere 2S", 
+      "image": "https://assets.pcmag.com/media/images/543483-logitech-mx-anywhere-2s.jpg?thumb=y", 
+      "details": "The Logitech MX Anywhere 2 is a well-built, versatile mouse that lives up to its name with a travel-friendly design and a sensor that works on nearly every surface." ,
+      "price": 35000
+    }
+  ]

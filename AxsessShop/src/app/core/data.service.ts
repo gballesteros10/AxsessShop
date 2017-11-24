@@ -32,7 +32,7 @@ export class DataService {
     }
 
     getTablets(): Observable<CartItem[]> {
-      return Observable.of(TABLETS);
+      return this._http.get('../../assets/data/','tablets.json');
     }
     
     getCartItems(): Observable<CartItem[]> {
@@ -40,7 +40,7 @@ export class DataService {
     }
 
     getMice(): Observable<CartItem[]> {
-      return Observable.of(MOUSE);
+      return this._http.get('../../assets/data/','mouse.json');
     }
 
 
