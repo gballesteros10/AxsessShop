@@ -11,13 +11,11 @@ import { DialogService } from '../core/dialog.service';
 export class CartComponent implements OnInit {
 
   public items: CartItem[];
-  public total: number = 0;
   constructor(public _data: DataService, public _dialog: DialogService) { }
 
   ngOnInit() {
     this._data.getCartItems().subscribe(res => {
       this.items = res;
-      this.total = this.items.reduce(function (sum, item) {return sum + item.price; }, 0);
     });
   }
 
@@ -31,6 +29,10 @@ export class CartComponent implements OnInit {
 
   public removeToCart(index) {
     this._data.removeToCart(index);
+  }
+
+  getTotal(): number {
+    return this.items.reduce(function (sum, item) {return sum + item.price; }, 0);
   }
 
 }
