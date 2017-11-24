@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +10,10 @@ import {
     MatCardModule,
     MatDialogModule,  
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule
   } from '@angular/material';
 
 
@@ -24,24 +27,28 @@ import {
     MatGridListModule,
     MatCardModule,
     MatDialogModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     MatButtonModule,
-    MatButtonToggleModule,
-    FormsModule,
-    CommonModule
+    MatButtonToggleModule
   ],
   exports: [   
     MatTableModule,
     MatGridListModule,
     MatCardModule,
     MatDialogModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     MatButtonModule,
-    MatButtonToggleModule,
-    FormsModule,
-    CommonModule
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: []

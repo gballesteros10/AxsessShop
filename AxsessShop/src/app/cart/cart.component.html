@@ -26,12 +26,12 @@
           </tr>
           <tr>
             <td style="padding-top:2em"><b>Total</b></td>
-            <td style="text-align: right; padding-top:2em"><b>{{total | currency: '₱ '}}</b></td>
+            <td style="text-align: right; padding-top:2em"><b>{{this.getTotal() | currency: '₱ '}}</b></td>
           </tr>
         </table>
       </mat-card-content>
       <mat-card-actions style="text-align: right">
-        <button mat-button mat-raised-button>CHECKOUT</button>
+        <button mat-button mat-raised-button [routerLink]="['/checkout']" [disabled]="!items.length">CHECKOUT</button>
       </mat-card-actions>
     </mat-card>
   </div>
