@@ -7,6 +7,7 @@ import { DialogService } from '../core/dialog.service';
 import { Subscription } from 'rxjs/Subscription';
 import { CurrencyPipe } from '@angular/common';
 
+
 @Component({
   selector: 'as-categories',
   templateUrl: './categories.component.html',

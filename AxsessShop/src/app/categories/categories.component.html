@@ -1,19 +1,18 @@
 <div class="container">
-  <div class="col-md-2 col-xs-12 cat-btn-back">
-  <a class="cat-btn-back" [routerLink]="['/dashboard']">
-    GO BACK
-  </a>
-</div>
-</div>
-<div class="container">
-  <mat-card class="example-card" *ngFor="let item of items">
-    <img mat-card-image [src]="item.image" alt="Photo">
-    <mat-card-content>
-      <p>{{item.name}}</p>
-      <p>{{item.price | currency}}</p>
-    </mat-card-content>
-    <mat-card-actions style="text-align: center">
-      <button class="cat-btn-details" mat-button mat-raised-button (click)="openDialog(item)">BUY</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+  <div class="row">
+    <div class="col-md-2">
+      <as-nav></as-nav>
+    </div>
+    <div class="col-md-10">
+      <mat-card class="example-card" *ngFor="let item of items">
+        <img mat-card-image [src]="item.image" alt="Photo">
+        <mat-card-content>
+          <p>{{item.name}}</p>
+          <p>{{item.price | currency}}</p>
+        </mat-card-content>
+        <mat-card-actions style="text-align: center">
+          <button class="cat-btn-details" mat-button mat-raised-button (click)="openDialog(item)">BUY</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
