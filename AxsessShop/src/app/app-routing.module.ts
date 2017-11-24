@@ -5,6 +5,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { UserLoginComponent } from './users/user-login/user-login.component';
 import { UserSignupComponent } from './users/user-signup/user-signup.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 export const routes: Routes = [
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'signup', component: UserSignupComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'checkout', component: CheckoutComponent },
   { path:'categories',  loadChildren: 'app/categories/categories.module#CategoriesModule'  },
 ];
 
