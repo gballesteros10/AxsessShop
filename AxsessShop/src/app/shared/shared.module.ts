@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+
 import {
     MatTableModule, 
     MatGridListModule,
@@ -33,8 +34,7 @@ import {
     ReactiveFormsModule,
     CommonModule,
     MatButtonModule,
-    MatButtonToggleModule,
-    CommonModule,
+    MatButtonToggleModule
   ],
   exports: [   
     MatTableModule,
@@ -48,8 +48,7 @@ import {
     ReactiveFormsModule,
     CommonModule,
     MatButtonModule,
-    MatButtonToggleModule,
-    CommonModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: []

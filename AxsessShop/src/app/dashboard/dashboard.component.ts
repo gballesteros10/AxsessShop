@@ -12,9 +12,8 @@ export class DashboardComponent implements OnInit {
   categories: Array<Object> = [
     {    Id: 1, Name: "Computers", Class: "purple"  },
     {    Id: 2, Name: "Tablets", Class: "blue"   },
-    {    Id: 3, Name: "Phones", Class: "red"   },
-    {    Id: 4, Name: "Mouse", Class: "orange"   },
-    {    Id: 5, Name: "Keyboards" , Class: "green"  }
+    {    Id: 3, Name: "Mouse", Class: "orange"   }
+
   ]
 
   constructor(private router: Router) { }

@@ -8,27 +8,29 @@ import { DialogService } from './dialog.service';
 
 import { CardItemComponent } from '../card-item/card-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { HttpService } from './http.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
-    CardItemComponent
+
   ],
   imports: [   
     BrowserModule,
     BrowserAnimationsModule,
-    SharedModule
-
+    SharedModule,
+    HttpClientModule
   ],
   exports: [ 
-
     BrowserModule,
     BrowserAnimationsModule ,
-    SharedModule
-
+    SharedModule,
+    HttpClientModule
   ],
   entryComponents:[CardItemComponent],
-  providers: [DataService, DialogService],
+  providers: [DataService, DialogService,HttpService],
   bootstrap: []
 })
 export class CoreModule { }
