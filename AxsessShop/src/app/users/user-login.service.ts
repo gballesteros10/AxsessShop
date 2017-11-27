@@ -14,6 +14,10 @@ export class UserLoginService {
     return false;
   }
 
+  logout() {
+    localStorage.removeItem("user");
+  }
+
   isRegisteredUser(user): boolean {
     const usersListJson = localStorage.getItem("usersList");
 

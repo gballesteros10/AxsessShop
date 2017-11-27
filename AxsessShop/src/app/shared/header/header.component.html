@@ -8,7 +8,7 @@
       <s>About</s>
     </div>
     <div class="col-md-2 as-header-tab">
-        <s>Logout</s>
+      <a (click)="logout()"><s>Logout</s></a>
     </div>
     <div class="col-md-2 cart-header-tab as-header-tab">
       <a [routerLink]="['/cart']">Cart ({{ (_data.cart | async).length }})</a>
